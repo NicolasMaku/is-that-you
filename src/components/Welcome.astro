@@ -1,0 +1,142 @@
+---
+const projects = [
+  {
+    name: "Drowser",
+    description: ["A easy way to implement and ", "write", " Selenium with TypeScript using Deno."],
+    tags: ["Typescript", "Deno", "Selenium"],
+    link: { label: "Source", type: "source", href: "#" },
+  },
+  {
+    name: "Cocli",
+    description: ["A lightweight git ", "commit", " prompt system to ensure readable and descriptive commit for Deno."],
+    tags: ["Typescript", "Deno", "Git"],
+    link: { label: "Source", type: "source", href: "#" },
+  },
+  {
+    name: "Mine",
+    description: ["Mine is a streamlined platform where developers and creators can showcase their work, skills, and projects in one central hub, making it easier to build a professional ", "online presence", " and connect with potential employers, clients, and collaborators."],
+    tags: ["Next.js", "Typescript", "PostgreSQL", "Drizzle", "TailwindCSS", "Shadcn UI", "Clerk", "Redis"],
+    link: { label: "Website", type: "website", href: "#" },
+  },
+  {
+    name: "Drowser Studio",
+    description: ["Drowser Studio is a ", "robust", " and ", "intuitive", " app designed to help users track, visualize, and analyze the performance of various tests over time."],
+    tags: ["Next.js", "Typescript", "PostgreSQL", "TailwindCSS", "Shadcn UI"],
+    link: { label: "Website", type: "website", href: "#" },
+  },
+];
+---
+
+<div class="min-h-screen bg-black font-sans">
+  <div class="max-w-3xl mx-auto px-8 py-16">
+
+    <!-- Hero -->
+    <section class="mb-28">
+      <h1 class="text-5xl font-bold text-white mb-6 tracking-tight">Hey, I'm Ando</h1>
+
+      <!-- Icon nav -->
+      <div class="flex items-center justify-between mb-8">
+        <div class="flex items-center gap-5">
+          <!-- Home -->
+          <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m2.25 12 8.954-8.955c.44-.439 1.152-.439 1.591 0L21.75 12M4.5 9.75v10.125c0 .621.504 1.125 1.125 1.125H9.75v-4.875c0-.621.504-1.125 1.125-1.125h2.25c.621 0 1.125.504 1.125 1.125V21h4.125c.621 0 1.125-.504 1.125-1.125V9.75" />
+            </svg>
+          </a>
+          <!-- Pencil -->
+          <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="m16.862 4.487 1.687-1.688a1.875 1.875 0 1 1 2.652 2.652L10.582 16.07a4.5 4.5 0 0 1-1.897 1.13L6 18l.8-2.685a4.5 4.5 0 0 1 1.13-1.897l8.932-8.931Zm0 0L19.5 7.125" />
+            </svg>
+          </a>
+        </div>
+
+        <div class="flex items-center gap-5">
+          <!-- Bluesky -->
+          <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 360 320" fill="currentColor">
+              <path d="M180 142c-16.3-31.7-60.7-90.8-102-120C38 2 14.3 5.1 6.8 11.2-.7 17.4-1.9 31 2.8 43.3 8.2 57.6 28 69.3 36 73.7c-7.4-1.2-14.8-2.9-22-5.2 0 7.1.7 56.8 47.3 70.5C78.3 143.3 86.1 143.8 94 144 86 144.7 74.3 147 58.2 153c47.3 28.8 100.8 14.2 129.8-7.3C217 167.2 270.5 181.8 317.8 153c-16.1-6-27.8-8.3-35.8-9 7.9-.2 15.7-.7 23.3-4.8 46.6-13.7 47.3-63.4 47.3-70.5-7.2 2.3-14.6 4-22 5.2 8-4.4 27.8-16.1 33.2-30.4C368.3 31 367.1 17.4 359.5 11.2 352-4.9 321.4 2 282 22c-41.3 29.2-85.7 88.3-102 120z"/>
+            </svg>
+          </a>
+          <!-- GitHub -->
+          <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+            </svg>
+          </a>
+          <!-- LinkedIn -->
+          <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M20.447 20.452h-3.554v-5.569c0-1.328-.027-3.037-1.852-3.037-1.853 0-2.136 1.445-2.136 2.939v5.667H9.351V9h3.414v1.561h.046c.477-.9 1.637-1.85 3.37-1.85 3.601 0 4.267 2.37 4.267 5.455v6.286zM5.337 7.433a2.062 2.062 0 0 1-2.063-2.065 2.064 2.064 0 1 1 2.063 2.065zm1.782 13.019H3.555V9h3.564v11.452zM22.225 0H1.771C.792 0 0 .774 0 1.729v20.542C0 23.227.792 24 1.771 24h20.451C23.2 24 24 23.227 24 22.271V1.729C24 .774 23.2 0 22.222 0h.003z"/>
+            </svg>
+          </a>
+          <!-- X / Twitter -->
+          <a href="#" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" viewBox="0 0 24 24" fill="currentColor">
+              <path d="M18.244 2.25h3.308l-7.227 8.26 8.502 11.24H16.17l-4.714-6.231-5.401 6.231H2.744l7.73-8.835L1.254 2.25H8.08l4.253 5.622 5.911-5.622zm-1.161 17.52h1.833L7.084 4.126H5.117z"/>
+            </svg>
+          </a>
+          <!-- Email -->
+          <a href="mailto:#" class="text-zinc-400 hover:text-white transition-colors">
+            <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+              <path stroke-linecap="round" stroke-linejoin="round" d="M21.75 6.75v10.5a2.25 2.25 0 0 1-2.25 2.25h-15a2.25 2.25 0 0 1-2.25-2.25V6.75m19.5 0A2.25 2.25 0 0 0 19.5 4.5h-15a2.25 2.25 0 0 0-2.25 2.25m19.5 0v.243a2.25 2.25 0 0 1-1.07 1.916l-7.5 4.615a2.25 2.25 0 0 1-2.36 0L3.32 8.91a2.25 2.25 0 0 1-1.07-1.916V6.75" />
+            </svg>
+          </a>
+        </div>
+      </div>
+
+      <!-- Bio -->
+      <p class="text-zinc-300 leading-relaxed max-w-sm text-[15px]">
+        <span class="text-orange-400">I'm</span> a software developer, open source enthusiast, and community builder. My experience includes leading workshops on AI, showcasing my versatility and commitment to the tech field.
+      </p>
+    </section>
+
+    <!-- Projects -->
+    <section>
+      <h2 class="text-4xl font-bold text-white leading-tight mb-4">
+        Explore my latest creations<br />and open-source projects.
+      </h2>
+      <p class="text-zinc-400 mb-8 max-w-sm leading-relaxed text-[15px]">
+        I've participated in the conception and development of a range of projects, including libraries, npm packages, and complex web applications. Here are a few of my favorites.
+      </p>
+
+      <div class="grid grid-cols-2 gap-3">
+        {projects.map((project) => (
+          <div class="bg-zinc-950 border border-zinc-800 rounded-lg p-4 flex flex-col">
+            <h3 class="font-bold text-white mb-2">{project.name}</h3>
+            <p class="text-sm text-zinc-400 mb-4 leading-relaxed flex-1">
+              {project.description.map((part, i) =>
+                i % 2 === 1
+                  ? <span class="text-orange-400">{part}</span>
+                  : part
+              )}
+            </p>
+            <div class="flex flex-wrap gap-1.5 mb-4">
+              {project.tags.map((tag) => (
+                <span class="text-xs border border-zinc-700 text-zinc-300 px-2 py-0.5 rounded">
+                  {tag}
+                </span>
+              ))}
+            </div>
+            <a
+              href={project.link.href}
+              class="inline-flex items-center gap-1.5 text-xs border border-zinc-700 text-zinc-300 px-3 py-1.5 rounded w-fit hover:border-zinc-500 hover:text-white transition-colors"
+            >
+              {project.link.type === "source" ? (
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M12 .297c-6.63 0-12 5.373-12 12 0 5.303 3.438 9.8 8.205 11.385.6.113.82-.258.82-.577 0-.285-.01-1.04-.015-2.04-3.338.724-4.042-1.61-4.042-1.61C4.422 18.07 3.633 17.7 3.633 17.7c-1.087-.744.084-.729.084-.729 1.205.084 1.838 1.236 1.838 1.236 1.07 1.835 2.809 1.305 3.495.998.108-.776.417-1.305.76-1.605-2.665-.3-5.466-1.332-5.466-5.93 0-1.31.465-2.38 1.235-3.22-.135-.303-.54-1.523.105-3.176 0 0 1.005-.322 3.3 1.23.96-.267 1.98-.399 3-.405 1.02.006 2.04.138 3 .405 2.28-1.552 3.285-1.23 3.285-1.23.645 1.653.24 2.873.12 3.176.765.84 1.23 1.91 1.23 3.22 0 4.61-2.805 5.625-5.475 5.92.42.36.81 1.096.81 2.22 0 1.606-.015 2.896-.015 3.286 0 .315.21.69.825.57C20.565 22.092 24 17.592 24 12.297c0-6.627-5.373-12-12-12"/>
+                </svg>
+              ) : (
+                <svg xmlns="http://www.w3.org/2000/svg" width="13" height="13" fill="none" viewBox="0 0 24 24" stroke="currentColor" stroke-width="1.5">
+                  <path stroke-linecap="round" stroke-linejoin="round" d="M12 21a9.004 9.004 0 0 0 8.716-6.747M12 21a9.004 9.004 0 0 1-8.716-6.747M12 21c2.485 0 4.5-4.03 4.5-9S14.485 3 12 3m0 18c-2.485 0-4.5-4.03-4.5-9S9.515 3 12 3m0 0a8.997 8.997 0 0 1 7.843 4.582M12 3a8.997 8.997 0 0 0-7.843 4.582m15.686 0A11.953 11.953 0 0 1 12 10.5c-2.998 0-5.74-1.1-7.843-2.918m15.686 0A8.959 8.959 0 0 1 21 12c0 .778-.099 1.533-.284 2.253m0 0A17.919 17.919 0 0 1 12 16.5c-3.162 0-6.133-.815-8.716-2.247m0 0A9.015 9.015 0 0 1 3 12c0-1.605.42-3.113 1.157-4.418" />
+                </svg>
+              )}
+              {project.link.label}
+            </a>
+          </div>
+        ))}
+      </div>
+    </section>
+
+  </div>
+</div>
