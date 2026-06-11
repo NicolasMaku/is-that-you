@@ -92,17 +92,17 @@ const projects = [
 
       <!-- Tech stack -->
       <div class="flex items-center justify-between mt-6">
-        <div class="relative overflow-hidden" style="width:80px;height:80px;">
-          <img class="tech-logo absolute top-0 left-0" src="/icons/react.webp" alt="React" width="80" height="80"/>
+        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
+          <img class="tech-logo" src="/icons/react.webp" alt="React" width="120" height="120"/>
         </div>
-        <div class="relative overflow-hidden" style="width:80px;height:80px;">
-          <img class="tech-logo absolute top-0 left-0" src="/icons/spring.png" alt="Spring Boot" width="80" height="80"/>
+        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
+          <img class="tech-logo" src="/icons/spring.png" alt="Spring Boot" width="120" height="120"/>
         </div>
-        <div class="relative overflow-hidden" style="width:80px;height:80px;">
-          <img class="tech-logo absolute top-0 left-0" src="/icons/java.svg" alt="Java" width="80" height="80"/>
+        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
+          <img class="tech-logo" src="/icons/java.svg" alt="Java" width="120" height="120"/>
         </div>
-        <div class="relative overflow-hidden" style="width:80px;height:80px;">
-          <img class="tech-logo absolute top-0 left-0" src="/icons/php.png" alt="PHP" width="80" height="80"/>
+        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
+          <img class="tech-logo" src="/icons/php.png" alt="PHP" width="120" height="120"/>
         </div>
       </div>
     </section>
@@ -202,9 +202,9 @@ const projects = [
   document.querySelectorAll<HTMLElement>('.tech-logo').forEach((logo, i) => {
     const { outX, outY, inX, inY } = logoAnims[i];
     gsap.timeline({ repeat: -1, repeatDelay: 1.5, delay: 1 + i * 0.25 })
-      .to(logo, { x: outX, y: outY, opacity: 0, duration: 0.35, ease: 'power2.in' })
+      .to(logo, { x: outX, y: outY, opacity: 0, duration: 0.5, ease: 'power2.in' })
       .set(logo, { x: inX, y: inY })
-      .to(logo, { x: 0, y: 0, opacity: 1, duration: 0.6, ease: 'power2.out' });
+      .to(logo, { x: 0, y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' });
   });
 
   // 3. Magnetic icons
