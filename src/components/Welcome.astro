@@ -25,6 +25,14 @@ const projects = [
     link: { label: "Website", type: "website", href: "#" },
   },
 ];
+
+const logos_img = [
+  ['react.webp'],
+  ['spring.png'],
+  ['java.svg'],
+  ['Nextjs.png', 'php.png']
+]
+
 ---
 
 <div class="min-h-screen bg-black font-sans">
@@ -32,7 +40,7 @@ const projects = [
 
     <!-- Hero -->
     <section class="mb-15">
-      <h1 id="hero-title" class="text-6xl font-bold text-white mb-6 tracking-tight" style="opacity:0">Hey, I'm Nicolas</h1>
+      <h1 id="hero-title" class="text-6xl font-bold text-white mb-6 tracking-tight" style="opacity:0">Hi, I'm Nicolas</h1>
 
       <!-- Icon nav -->
       <div class="flex items-center justify-between mb-8">
@@ -86,24 +94,28 @@ const projects = [
       </div>
 
       <!-- Bio -->
-      <p class="text-zinc-300 leading-relaxed max-w-sm text-[15px]">
-        <span class="text-orange-400">I'm</span> a software developer, open source enthusiast, and community builder. My experience includes leading workshops on AI, showcasing my versatility and commitment to the tech field.
+      <p class="text-zinc-400 leading-relaxed text-[15px]">
+        I'm a software developer with a passion for AI, machine learning, and modern web technologies. Driven by curiosity and continuous learning, I enjoy exploring new technologies and transforming ambitious ideas into real-world projects.
       </p>
 
       <!-- Tech stack -->
       <div class="flex items-center justify-between mt-6">
-        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
-          <img class="tech-logo" src="/icons/react.webp" alt="React" width="120" height="120"/>
-        </div>
-        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
-          <img class="tech-logo" src="/icons/spring.png" alt="Spring Boot" width="120" height="120"/>
-        </div>
-        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
-          <img class="tech-logo" src="/icons/java.svg" alt="Java" width="120" height="120"/>
-        </div>
-        <div class="relative overflow-hidden flex items-center justify-center" style="width:120px;height:120px;">
-          <img class="tech-logo" src="/icons/php.png" alt="PHP" width="120" height="120"/>
-        </div>
+        {logos_img.map((group, i) => (
+          <div
+            class="relative overflow-hidden flex items-center justify-center tech-slot"
+            style="width:120px;height:100px;"
+            data-index={i}
+          >
+              <img
+                class="tech-logo absolute"
+                src={`/icons/${group[0]}`}
+                alt=""
+                width="120"
+                height="100"
+                data-pos={i}
+              />
+          </div>
+        ))}
       </div>
     </section>
 
@@ -199,12 +211,70 @@ const projects = [
     { outX: 0,    outY: -100, inX: 100, inY: 0   },  // sort haut,    entre droite
   ];
 
-  document.querySelectorAll<HTMLElement>('.tech-logo').forEach((logo, i) => {
-    const { outX, outY, inX, inY } = logoAnims[i];
-    gsap.timeline({ repeat: -1, repeatDelay: 1.5, delay: 1 + i * 0.25 })
-      .to(logo, { x: outX, y: outY, opacity: 0, duration: 0.5, ease: 'power2.in' })
-      .set(logo, { x: inX, y: inY })
-      .to(logo, { x: 0, y: 0, opacity: 1, duration: 0.8, ease: 'power2.out' });
+  // document.querySelectorAll<HTMLElement>('.tech-logo').forEach((logo, i) => {
+  //   const { outX, outY, inX, inY } = logoAnims[i];
+  //   gsap.timeline({ repeat: -1, repeatDelay: 2, delay: 1 + i * 0.30 })
+  //     .to(logo, { x: outX, y: outY, opacity: 0, duration: 0.6, ease: 'power2.in' })
+  //     .set(logo, { x: inX, y: inY })
+  //     .to(logo, { x: 0, y: 0, opacity: 1, duration: 0.9, ease: 'power2.out' });
+  // });
+
+  const logos = document.querySelectorAll(".tech-logo");
+  const logos_img = [
+    ['react.webp', 'Nextjs.png'],
+    ['spring.png', "scikit_learn.png"],
+    ['java.svg', 'python.png'],
+    ['Nextjs.png', 'php.png']
+  ]
+    
+
+logos.forEach((logo, i) => {
+  let index = 0;
+  const { outX, outY, inX, inY } = logoAnims[i];
+
+  // état initial propre
+  gsap.set(logo, {
+    x: 0,
+    y: 0,
+    opacity: 1,
+  });
+
+  const tl = gsap.timeline({
+    repeat: -1,
+    repeatDelay: 1.5,
+    delay: i * 0.3,
+  });
+
+  tl.to(logo, {
+    x: outX,
+    y: outY,
+    opacity: 0,
+    duration: 0.6,
+    ease: "power2.in",
+  })
+
+  // IMPORTANT: reset instant sans visibilité parasite
+  .set(logo, {
+    x: inX,
+    y: inY,
+    opacity: 0,
+  })
+
+  .call(() => {
+    if (index == 2) {
+      index = 0
+    }
+    logo.setAttribute('src', `/icons/${logos_img[i][index]}`);
+    index++;
+  })
+
+  .to(logo, {
+    x: 0,
+    y: 0,
+    opacity: 1,
+    duration: 0.9,
+    ease: "power2.out",
+  });
   });
 
   // 3. Magnetic icons
